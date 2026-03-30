@@ -52,7 +52,7 @@
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>
-										${suite}.xml
+										suite.xml
 									</suiteXmlFile>
 									<!--
 									<file>src/test/resources/testng.xml</file>-->
