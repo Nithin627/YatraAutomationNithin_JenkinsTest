@@ -31,38 +31,43 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven
+	<profiles>
+		<profile>
+		<id>Regression</id>
+			<build>
+				<pluginManagement><!-- lock down plugins versions to avoid using
+					Maven
 			defaults (may be moved to parent pom) -->
-			<plugins>
-				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.13.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.3.0</version>
-					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>
-								${suite}.xml
-							</suiteXmlFile>
-							<!-- 	<file>src/test/resources/testng.xml</file>-->
-						</suiteXmlFiles>
-						<!-- 
+					<plugins>
+						<plugin>
+							<artifactId>maven-compiler-plugin</artifactId>
+							<version>3.13.0</version>
+						</plugin>
+						<plugin>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.3.0</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>
+										${suite}.xml
+									</suiteXmlFile>
+									<!--
+									<file>src/test/resources/testng.xml</file>-->
+								</suiteXmlFiles>
+								<!-- 
 						<groups>${groups}</groups>
 						<systemPropertyVariables>
 							<browser>${BrowserName}</browser>
 							<isLamdaTest>${isLamdaTest}</isLamdaTest>
 							<isHeadLess>${isHeadLess}</isHeadLess>
 						</systemPropertyVariables>-->
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 </project>
 
 
