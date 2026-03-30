@@ -12,6 +12,7 @@ public class DemoTest2 extends Driver {
 
 	@Test
 	public void test() {
+//		test
 
 		By cancel = By.cssSelector("img[alt='cross']");
 		By departureDate = By.xpath("//div[@aria-label='Departure Date inputbox']");
